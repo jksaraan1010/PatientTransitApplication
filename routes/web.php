@@ -19,8 +19,8 @@
 
 //Route::get('/survey', 'SurveyController@getQuestions');
 //Route::get('survey/{sectionId}', 'SurveyController@getQuestions');
-Route::get('survey', 'SurveyController@index');
-Route::get('survey/questions/{sectionId}', 'SurveyController@getQuestions');
+//Route::get('survey', 'SurveyController@index');
+//Route::get('survey/questions/{sectionId}', 'SurveyController@getQuestions');
 //Route::post('survey/questions/{sectionId}', 'SurveyController@saveAnswers');
 
 
@@ -30,9 +30,20 @@ Route::get('/add', 'EventsController@display');
 Route::get('/edit', 'EventsController@show');
 Route::get('/delete', 'EventsController@show');
 
-
-
+//Route::resource('survey', 'SurveyRecentController');
 
 Route::resource('notes', 'NotesController');
 
+Route::resource('survey123', 'Survey123Controller');
+Route::post('/survey123/store', 'Survey123Controller@store') ->name('survey123Store');
+//Route::get('/survey123/store', 'Survey123Controller@store');
+
+//Route::post('/survey123/store', 'Survey123Controller@store');
+
+
+Route::post('/', function(){
+    Radio::create([
+    ]);
+})
+?>
 
