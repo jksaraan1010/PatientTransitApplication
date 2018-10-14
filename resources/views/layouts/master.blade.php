@@ -128,7 +128,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/forms/general.html" class="nav-link">
+                <a href="survey123" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Take Survey</p>
                 </a>

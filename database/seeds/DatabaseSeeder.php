@@ -14,6 +14,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        
+        Eloquent::unguard();
+
+  $this->call(SurveysTableSeeder::class);
+  $this->call(SectionsTableSeeder::class);
+  $this->call(QuestionsTableSeeder::class);
+
+
+
+  Eloquent::reguard();
+        
         // Ask for db migration refresh, default is no
         if ($this->command->confirm('Do you wish to refresh migration before seeding, it will clear all old data ?')) {
             // disable fk constrain check
